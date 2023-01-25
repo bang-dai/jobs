@@ -7,7 +7,6 @@ import {
 } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
 import { goerli, hardhat } from 'wagmi/chains';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { publicProvider } from 'wagmi/providers/public';
 import { ChakraProvider } from '@chakra-ui/react'
 import { EventProvider } from '@/context/EventContext';
@@ -15,7 +14,6 @@ import { EventProvider } from '@/context/EventContext';
 const { chains, provider } = configureChains(
   [goerli, hardhat],
   [
-    alchemyProvider({ apiKey: process.env.ALCHEMY_ID }),
     publicProvider()
   ]
 );
