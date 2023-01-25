@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { ethers } from "ethers";
-import Contract from '../../backend/artifacts/contracts/Jobs.sol/Jobs'
+import Contract from '../Jobs.json'
 import { useAccount, useProvider } from "wagmi";
 
 const EventContext = React.createContext(null)
