@@ -34,7 +34,7 @@ export const EventProvider = ({ children }) => {
 
         const contract = new ethers.Contract(contractAddress, Contract.abi, provider)
         let myEvents = []
-        let blocks = await contract.queryFilter(filter)
+        let blocks = await contract.queryFilter("*", -3000, "latest")
 
         for await (const block of blocks) {
             if (block.event === "jobAdded") {

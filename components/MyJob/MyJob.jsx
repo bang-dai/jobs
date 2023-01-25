@@ -17,7 +17,7 @@ const MyJob = () => {
         try {
 
             let transaction = await contract.setIsFinishedAndPay(id)
-            await transaction.wait(1) //= wait(1) même chose
+            await transaction.wait(2) //= wait(1) même chose
             getEvents()
             toast({
                 title: 'Congratulations!',

@@ -22,7 +22,7 @@ const YourJob = () => {
             setLoading(true)
 
             let transaction = await contract.takeJob(id)
-            await transaction.wait(1) //= wait(1) même chose
+            await transaction.wait(2) //= wait(1) même chose
             getEvents()
             toast({
                 title: 'Congratulations!',
