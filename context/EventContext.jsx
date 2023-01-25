@@ -29,7 +29,7 @@ export const EventProvider = ({ children }) => {
     const getEvents = async () => {
         let filter = {
             address: contractAddress,
-            fromBlock: 0
+            fromBlock: process.env.NEXT_PUBLIC_BLOCK
         };
 
         const contract = new ethers.Contract(contractAddress, Contract.abi, provider)
